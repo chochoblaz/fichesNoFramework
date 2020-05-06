@@ -1,0 +1,82 @@
+.boutons {
+	border: none;
+	border-radius: 2px;
+	display: inline-block;
+	height: 36px;
+	line-height: 36px;
+	padding: 0 16px;
+	margin: 16px;
+	text-transform: uppercase;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+.html {
+	background-color: #DE4B25;
+	color: #F0F0F0;
+}
+
+.html:hover {
+	background-color: #EA6229;
+}
+
+.html:active {
+	background-color: #F0F0F0;
+	color: #DE4B25;
+}
+
+.css {
+	background-color: #0C70B3;
+	color: #F0F0F0;
+}
+
+.css:hover {
+	background-color: #2FA4D6;
+}
+
+.css:active {
+	background-color: #F0F0F0;
+	color: #0C70B3;
+}
+
+.javascript {
+	background-color: #DF9E26;
+	color: #F0F0F0;
+}
+
+.javascript:hover {
+	background-color: #EABA25;
+}
+
+.javascript:active {
+	background-color: #F0F0F0;
+	color: #DF9E26;
+}
+
+.git {
+	background-color: #4CAF50;
+	color: #F0F0F0;
+}
+
+.git:hover {
+	background-color: #66BB6B;
+}
+
+.git:active {
+	background-color: #F0F0F0;
+	color: #4CAF50;
+}
+
+.terminal {
+	background-color: #130B04;
+	color: #F0F0F0;
+}
+
+.terminal:hover {
+	background-color: #6B6F70;
+}
+terminal
+.terminal:active {
+	background-color: #F0F0F0;
+	color: #130B04;
+}

@@ -1,0 +1,157 @@
+/*style des composants dans des fichiers séparés*/
+
+@import url("css/boutons.css");
+@import url("css/banniere.css");
+
+/*reset du style par défaut de la page*/
+
+* {
+	padding: O;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* font-family Google
+font-family: 'Roboto', sans-serif; normal & bold
+font-family: 'Open Sans', sans-serif; 300-700 + italic
+*/
+
+/*Polices et mise en page*/
+
+body {
+	font-family: "Open Sans", sans-serif;
+	background-color: #F0F0F0;
+
+}
+
+h1 {
+	font-family: Roboto, sans-serif;
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+h2 {
+	font-family: Roboto, sans-serif;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+h2 code {
+	font-size: 1.9rem;
+}
+
+h3 {
+	font-family: Roboto, sans-serif;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+p {
+	padding-bottom: 0.5rem;
+	font-size: 1rem;
+}
+
+code {
+	font-size: 1.3rem;
+}
+
+.main-index{
+	display: flex;
+	align-items: center;
+	background: radial-gradient(rgba(96, 125, 139,0.5), rgba(96, 125, 139,0.5)), url("images/fonds/code_fonds.jpg");
+	background-size: cover;
+	height: 50%;
+}
+
+.main-index nav {
+	width: 400px;
+	text-align: center;
+	margin: auto;
+}
+
+footer {
+	padding: 10px;
+}
+
+.ecran {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+	width: 100vw;
+	
+}
+
+.haut-de-premiere-page {
+	height: 7rem; /*hauteur de la banniere*/
+}
+
+.page {
+	min-height: 100vh;
+	padding-top: 7rem; /*hauteur de la banniere*/
+}
+
+.page-center header {
+	text-align: center;
+	margin-bottom: 1.5rem;
+	border-top: 1px solid #959BA0;
+	border-bottom:1px solid #959BA0;
+}
+
+.page-center img {
+	display: block;
+	margin: auto;
+	width: 60%;
+	height: auto;
+}
+
+/*Couleurs*/
+
+	/*Couleurs de fonds*/
+.couleur:nth-child(odd){
+	background-color: rgba(255, 87, 34, 50%);
+}
+
+.couleur:nth-child(even){
+	background-color: #F0F0F0;
+}
+
+	/*Couleurs de texte*/
+.rose{
+	color: #F92472;
+	opacity: 0.8;
+}
+
+.vert{
+	color: #A1DB2C;
+	opacity: 0.8;
+}
+
+.jaune {
+	color: #E3D772;
+	opacity: 0.8;
+}
+
+.violet {
+	color: #A97EFA;
+	opacity: 0.8;
+}
+
+.bleu {
+	color: #67D8EF;
+	opacity: 0.8;
+}
+
+@media screen and (min-width: 600px) {
+	.page-center {
+	width: 600px;
+	margin: auto;
+}
+}
+
+
+
+
+
+
+

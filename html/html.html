@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name='viewport'
+      content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+	<title>HTML</title>
+	<link rel="stylesheet" href="../style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	
+	<header class="banniere">
+		<h1>HTML</h1>
+		<nav class="">
+			<label for="menu-deroulant" class="menu-deroulant cache">Menu</label>
+			<input type="checkbox" id="menu-deroulant" class="cache">
+			<ul class="sous-menu">
+				<li><a class="dropdown-item" href="../index.html">Index</a></li>
+		  		<li><a class="dropdown-item" href="css.html">CSS</a></li>
+				<li><a class="dropdown-item" href="javascript.html">JavaScript</a></li>
+				<li><a class="dropdown-item" href="git.html">Git & GitHub</a></li>
+				<li><a class="dropdown-item" href="terminal.html">Terminal</a></li>
+		  	</ul>
+		</nav>
+	</header>
+
+	<main>
+		<article>
+
+<!-- Pour faire un élément que se retrouve sous la bannière-->
+			<section class="haut-de-premiere-page"></section>
+<!-- Définition -->
+			<section class="page">
+				<div class="page-center placement-vertical">
+					<header>
+					<h2 id="definition-HTML">Définition</h2>
+					</header>
+					<p>Le HTML est un langage de balisage utilisé pour la création de pages web.</p>
+					<p>C'est un acronyme pour HyperText Markup Langage. En effet, ce langage permet d'intégrer des liens hypertextes afin de faciliter la navigation</p>
+					<p>Syntaxe:</p>
+					<img src="../images/syntaxe_html.png" alt="Syntaxe HTML"> <br>
+					<p>Pour ajouter dans le texte des caractères réservés pour le code html il faut utiliser des caractères spéciaux. <br><br>Voici quelques exemples usuels : <br><br>
+					&lt; : <span class="violet">&<span></span>lt;</span> / &gt; : <span class="violet">&<span></span>gt;</span> / 1 espace : <span class="violet">&<span></span>nbsp;</span> / 2 espace : <span class="violet">&<span></span>ensp;</span> / 4 espace : <span class="violet">&<span></span>emsp;</span>
+					</p>		
+				</div>	
+			</section>
+<!-- Structure de base -->
+			<section class="page couleur">
+				<div class="page-center placement-vertical">
+					<header>
+						<h2 id="structure-HTML">Structure de base d'une page HTML</h2>
+					</header>
+					
+					<p><code>&lt;!<span class="rose">DOCTYPE</span> <span class="voilet">html</span>&gt;</code>  → indique au navigateur que c'est un page écrite en HTML5
+					<br>&emsp;<code>&lt;<span class="rose">html</span> <span class="vert">lang</span>=<span class="jaune">"en"</span>&gt;</code> → défini le langage par défaut du document
+					<br>&emsp;&emsp;<code>&lt;<span class="rose">head</span>&gt;</code> → opening tag
+					<br>&emsp;&emsp;Toutes les métadatas (données non affichées) vont là
+					<br>&emsp;&emsp;<code>&lt;/<span class="rose">head</span>&gt;</code> → closing tag
+					<br>&emsp;&emsp;<code>&lt;<span class="rose">body</span>&gt;</code> 
+					<br>&emsp;&emsp;Tout le contenu de la page va là
+					<br>&emsp;&emsp;<code>&lt;/<span class="rose">body</span>&gt;</code>
+					<br>&emsp;<code>&lt;/<span class="rose">html</span>&gt;</code>
+					</p>
+				</div>
+			</section>
+<!-- HEAD -->			
+			<section class="page couleur">
+				<div class="page-center placement-vertical">
+					<header>
+					<h2 id="head-en-detail"><code>&lt;head&gt;</code> en détail</h2>
+					</header>
+
+					<p><code>&lt;<span class="rose">meta</span> <span class="vert">charset</span>=<span class="jaune">'UTF-8'</span>/&gt;</code> → alphabet que le navigateur doit prendre en compte (pour les caractères spéciaux)
+					<br><code>&lt;<span class="rose">title</span>&gt;</code>Titre de la page qui se voit dans le tab du navigateur<code>&lt;/<span class="rose">title</span>&gt;</code>
+					<br><code>&lt;<span class="rose">meta</span> <span class="vert">name</span>=<span class="jaune">'viewport'</span>
+      				<span class="vert"><content/span>=<span class="jaune">'width=device-width, initial-scale=1.0, maximum-scale=1.0'</span>/&gt;</code> → Pour désactiver le mode zoom des smartphones
+      				<br><code>&lt;<span class="rose">link</span> <span class="vert">rel</span>=<span class="jaune">'stylesheet' href='styles.css</span>/&gt;</code> ATTENTION l'ordre de déclaration a de l'importance. Si on déclare un autre fichier CSS après qui entre en conflit avec celui-là c'est le dernier déclaré qui est pris en compte.
+					</p>
+					<br>
+					<p>On peut aussi déclarer les polices de caractère et autres framework CSS en ajoutant des <code>&lt;<span class="rose">link</span>/&gt;</code></p>
+					<br>
+					<p>On peut aussi rajouter des règles CSS en utilisant <code>&lt;<span class="rose">style</span>&gt;</code><code>&lt;/<span class="rose">style</span>&gt;</code>. Mais ce n'est pas une bonne pratique. Il est recommandé de mettre les règles de style dans les fichiers CSS.</p>
+				</div>	
+			</section>
+<!-- BODY -->			
+			<section class="page couleur">
+				<div class="page-center placement-vertical">
+					<header>
+						<h2 id="body-tags-usuels">Liste de tags usuels du <code>&lt;body&gt;</code></h2>
+					</header>
+
+					<p>
+						<code>&lt;<span class="rose">h1..6</span>&gt;</code><code>&lt;/<span class="rose">h1..6</span>&gt;</code> : titres du plus important au moins important <br>BONNE PRATIQUE : n'utiliser qu'un seul élément h1 par section sémantique <br>
+
+						<code>&lt;<span class="rose">p</span>&gt;</code><code>&lt;/<span class="rose">p</span>&gt;</code> : paragraphe <br>
+
+						<code>&lt;<span class="rose">ul</span>&gt;</code><code>&lt;/<span class="rose">ul</span>&gt;</code>  : liste non ordonnée <br>
+
+						<code>&lt;<span class="rose">ol</span>&gt;</code><code>&lt;/<span class="rose">ol</span>&gt;</code>  : liste ordonnée <br>
+
+						<code>&lt;<span class="rose">li</span>&gt;</code><code>&lt;/<span class="rose">li</span>&gt;</code>  : list item <br>
+						
+						ATTENTION les <code>&lt;<span class="rose">ul</span>&gt;</code> et <code>&lt;<span class="rose">ol</span>&gt;</code> ne peuvent être suivis que de <code>&lt;<span class="rose">li</span>&gt;</code> ! <br>
+
+						<code>&lt;<span class="rose">dl</span>&gt;</code><code>&lt;/<span class="rose">dl</span>&gt;</code>  : definition list avec des <code>&lt;<span class="rose">dt</span>&gt;</code><code>&lt;/<span class="rose">dt</span>&gt;</code> termes à définir et des <code>&lt;<span class="rose">dd</span>&gt;</code><code>&lt;/<span class="rose">dd</span>&gt;</code> définitions ou descriptions <br>
+
+						<code>&lt;<span class="rose">em</span>&gt;</code><code>&lt;/<span class="rose">em</span>&gt;</code>  : emphasis pour un mot <em>important</em> (italic par défaut) <br>
+
+						<code>&lt;<span class="rose">strong</span>&gt;</code><code>&lt;/<span class="rose">strong</span>&gt;</code>  : strong pour un mot <strong>très important</strong> (gras par défaut) <br>
+
+						ATTENTION <code>&lt;<span class="rose">em</span>&gt;</code> et <code>&lt;<span class="rose">strong</span>&gt;</code> ont une portée sémantique donc à utiliser à bon escient ! <br>
+
+						<code>&lt;<span class="rose">mark</span>&gt;</code><code>&lt;/<span class="rose">mark</span>&gt;</code>  : marque le contenu en le surlignant mais pas de signification sémantique. S'utilise en général en dynamique comme lors d'une recherche par un utilisateur par exemple <br>
+
+						<code>&lt;<span class="rose">span</span>&gt;</code><code>&lt;/<span class="rose">span</span>&gt;</code>  : contenant générique inline-content sans sens sémantique <br>
+
+						<code>&lt;<span class="rose">div</span>&gt;</code><code>&lt;/<span class="rose">div</span>&gt;</code>  : contenant générique block-level. Il s'applique quand un contenant sémantique ne peut l'être<br>
+
+						<code>&lt;<span class="rose">br</span>&gt;</code> ou <code>&lt;<span class="rose">br</span>/&gt;</code>  : retour à la ligne <br>
+
+						<code>&lt;<span class="rose">hr</span>&gt;</code> ou <code>&lt;<span class="rose">hr</span>/&gt;</code>  : ligne horizontale de séparation <br>
+
+						<code>&lt;<span class="rose">a</span> <span class="vert">href</span>=<span class="jaune">'lien'</span> <span class="vert">target</span>=<span class="jaune">'_blank'</span>&gt;</code><code>&lt;<span class="rose">a</span>/&gt;</code>  : "anchor" qui créé un lien hypertexte (cf. <a href="#">les différents types de liens href</a>) <br> l’attribut target sert à ouvrir le lien dans un autre onglet s'il est égal à _blank. Il est bien évidement possible de mettre autre chose que du texte entre les <code>&lt;<span class="rose">a</span>&gt;</code> pour en faire un lien cliquable (une image par exemple) 		
+					</p><br><br>
+				</div>	
+			</section>
+
+<!-- Tags de Media -->			
+			<section class="page couleur">
+				<div class="page-center placement-vertical">
+					<header>
+						<h2 id="tags-de-media">Cas des tags de media</h2>
+					</header>
+
+					<p>
+						<code>&lt;<span class="rose">img</span> <span class="vert">src</span>=<span class="jaune">'photo.jpg'</span> <span class="vert">alt</span>=<span class="jaune">'remplace l'image si elle ne s'affiche pas'</span>&gt;</code>  : affiche une image <br><br>
+
+						<code>&lt;<span class="rose">video</span> <span class="vert">src</span>=<span class="jaune">'video.mp4'</span> <span class="vert">width</span>=<span class="jaune">'320'</span> <span class="vert">height</span>=<span class="jaune">'240'</span> <span class="vert">controls</span> <span class="vert">loop</span>&gt;</code>Video Not Supported<code>&lt;/<span class="rose">video</span>&gt;</code> : affiche une video située à l'adresse src de taille 320X240 avec les boutons de contrôle (play/pause) qui tournera en boucle. Si le navigateur ne peut pas diffuser la vidéo il écrira le texte encapsulé<br>
+						Il est reccomandé de mettre le son en mute si le lancement de la vidéo est automatiquement<br> 
+						Il est possible de mettre une image de fond quand la vidéo ne tourne pas avec l'attribut <span class="vert">poster</span>=<span class="jaune">'image.png'</span><br><br>
+
+						On peut aussi mettre plusieurs vidéos source en encapsulant <code>&lt;<span class="rose">source</span> <span class="vert">src</span>=<span class="jaune">'video.mp4'</span>&gt;</code> <br><br>
+
+						<code>&lt;<span class="rose">audio</span> <span class="vert">src</span>=<span class="jaune">'audio.mp3'</span> <span class="vert">autoplay</span> <span class="vert">controls</span> <span class="vert">loop</span>&gt;</code><code>&lt;/<span class="rose">audio</span>&gt;</code> : Pour du son. Comme pour les vidéos il est ainsi possible de mettre plusieurs formats en encapsulant dans audio <code>&lt;<span class="rose">source</span> <span class="vert">src</span>=<span class="jaune">'audio.mp3'</span> <span class="vert">type</span>=<span class="jaune">'audio/mp3'</span>&gt;</code><br><br> 
+						Quand on utilise <code>&lt;<span class="rose">source</span>&gt;</code> il est reccommandé de spécifier le format de l'audio ou de la vidéo dans <span class="vert">type</span> pour que le navigateur puisse choisir le plus adapté<br><br>
+
+						<code>&lt;<span class="rose">embed</span>/&gt;</code> : contient un media (video, audio...) qui peut être ajouté à d'autres sites web<br>
+						<code>&lt;<span class="rose">iframe</span>&gt;</code><code>&lt;/<span class="rose">iframe</span>&gt;</code> : sert à intégrer tout ou partie d'un autre site web (video YT par ex)<br>
+						ATTENTION comporte des risques car est une porte d'entrée pour les hackers donc à utiliser avec l'attribu sandbox<br>
+						On peut encapsuler un contenu de repli avec par exemple un <code>&lt;<span class="rose">p</span>&gt;</code><code>&lt;<span class="rose">a</span> <span class="vert">href</span>=<span class="jaune">'lien de repli'</span>&gt;</code>Lien<code>&lt;<span class="rose">a</span>/&gt;</code><code>&lt;/<span class="rose">p</span>&gt;</code>		
+					</p><br><br>
+				</div>	
+			</section>
+
+<!-- Différents types de liens -->
+			<section class="page couleur">
+				<div class="page-center placement-vertical">
+					<header>
+					<h2 id="differents-types-de-liens">Les différents types de liens</h2>
+					</header>
+
+					<p>Absolu : lien écrit en entier. Principalement pour envoyer vers un autre site</p><br><br>
+					<p>Relatif : lien dans le même dossier relatif au fichier sur lequel on travail. <br> ./sous-dossier/fichier si l’élément recherché est dans le même dossier et ../../fichier s'il est dans un dossier parent (on remonte autant de fois que nécessaire).</p><br><br>
+					<p>Root-relative : lien relatif à la racine du site web (mon-site.com par exemple). Ici on utilise / dont le premier représente la racine du site (ex /dossier/fichier → on n'écrit pas mon-site.com avant le premier /)</p>
+				</div>	
+			</section>
+
+<!-- Liste des tags sémantiques -->			
+			<section class="page couleur">
+				<div class="page-center placement-vertical">
+					<header>
+						<h2 id="tags-semantiques">Liste des tags sémantiques</h2>
+					</header>
+
+					<p>
+						<code>&lt;<span class="rose">header</span>&gt;</code><code>&lt;/<span class="rose">header</span>&gt;</code> : partie introductive pour une page (logo, nav), article (synopsis) ou section (titre). Il est de bonne pratique de mettre le nom, logo et navigation principale d'un site dans un <code>&lt;<span class="rose">header</span>&gt;</code><br>
+
+						<code>&lt;<span class="rose">nav</span>&gt;</code><code>&lt;/<span class="rose">nav</span>&gt;</code> : pour les éléments de navigation (liens header ou footer, sidebar, …) <br>
+
+						<code>&lt;<span class="rose">main</span>&gt;</code><code>&lt;/<span class="rose">main</span>&gt;</code>  : encapsule le contenu dominant d'une page <br>
+
+						<code>&lt;<span class="rose">article</span>&gt;</code><code>&lt;/<span class="rose">article</span>&gt;</code>  : regroupe des éléments qui ont un sens même en dehors du site (un article de presse, un post de blog...) <br>
+
+						<code>&lt;<span class="rose">section</span>&gt;</code><code>&lt;/<span class="rose">section</span>&gt;</code>  : comme un article mais n'a pas de sens seul. Pour une partie définie d'un article (un chapitre) ou plusieurs articles sur un même sujet. C'est plus explicite que d'utiliser un <code>&lt;<span class="rose">div</span>&gt;</code>. Permet de segmenter sans se référer à l'ordre des <code>&lt;<span class="rose">h</span>&gt;</code>. <br>
+
+						<code>&lt;<span class="rose">aside</span>&gt;</code><code>&lt;/<span class="rose">aside</span>&gt;</code>  : Pour signifier que des informations ne font pas partie de l'élément dans lequel elles se trouvent. Par exemple des définitions de mots, commentaires, citations, biographie ou une pub <br>
+
+						<code>&lt;<span class="rose">figure</span>&gt;</code><code>&lt;/<span class="rose">figure</span>&gt;</code>  : une illustration (image, diagramme,...) <br>
+
+						<code>&lt;<span class="rose">figcaption</span>&gt;</code><code>&lt;/<span class="rose">figcaption</span>&gt;</code>  : décrit l'illustration à laquelle il est associé. Le <code>&lt;<span class="rose">figcaption</span>&gt;</code> est encapsulé dans le <code>&lt;<span class="rose">figure</span>&gt;</code> <br>
+
+						<code>&lt;<span class="rose">footer</span>&gt;</code><code>&lt;/<span class="rose">footer</span>&gt;</code>  : partie finale d'une page (nav en bas de page), article (bio de l'auteur), le site entier (copyright) <br>
+						
+						<code>&lt;<span class="rose">time</span>&gt;</code><code>&lt;/<span class="rose">time</span>&gt;</code>  : Pour indiquer au moteur de recherche de quand date la page. S'écrit <code>&lt;<span class="rose">time</span> <span class="vert">datetime</span>=<span class="jaune">'année-mois-jour 17:35-0200'</span>&gt;</code> heures en 24h puis timezone<br>
+
+						<code>&lt;<span class="rose">address</span>&gt;</code><code>&lt;/<span class="rose">address</span>&gt;</code>  : pour une fiche contact (possible d'utiliser 'mailto:nomprenom@site.com')<br><br>
+
+						Les anciens navigateurs ne connaissent pas les tags sémantiques donc pour qu'ils soient considérés comme des div il faut écrire dans le fichier CSS :
+
+						<span class="rose">section, article, aside, footer, header, nav</span> {<br>
+  						<span class="bleu">display</span>: <span class="jaune">block</span>;<br>
+  						}
+							
+					</p><br><br>
+				</div>	
+			</section>
+
+<!-- Différents types de liens -->
+			<section class="page couleur">
+				<div class="page-center placement-vertical">
+					<header>
+					<h2 id="cas-de-id">Cas des attributs <span class="vert">id</span></h2>
+					</header>
+
+					<p>Il est possible de donner un <span class="vert">id</span> unique à un élément HTML. L'<span class="vert">id</span> est unique car il correspond à un fragment d'URL.</p>
+
+					<img src="../images/url_avec_id.png" alt="URL avec ID">
+
+
+					<p>Il faut éviter de s'en servir comme selector pour notre CSS. <br>
+					Par contre il est très utile pour créer des liens entre les différentes sections d'une page : <br>
+					<code>&lt;<span class="rose">a</span> <span class="vert">href</span>=<span class="jaune">'#sommaire'</span><span class="vert">Sommaire</span>&gt;</code><code>&lt;<span class="rose">a</span>/&gt;</code> : Pour aller au sommaire <br><br>
+
+					Ou entre différentes pages d'un même site : <br><br>
+
+					<code>&lt;<span class="rose">a</span> <span class="vert">href</span>=<span class="jaune">'index.html#sommaire'</span><span class="vert">Sommaire du site</span>&gt;</code><code>&lt;<span class="rose">a</span>/&gt;</code> : Pour aller au sommaire du site sur la page Index <br><br>
+
+					Les <span class="vert">id</span> sont aussi indispensables pour lier les labels des input (cf forms)
+
+					</p>
+				</div>	
+			</section>
+
+<!-- Les Forms -->
+			<section class="page couleur">
+				<div class="page-center placement-vertical">
+					<header>
+					<h2 id="definition-forms">Les Forms</h2>
+					</header>
+
+					<p>Les Forms servent à collecter des informations saisies par un visiteur du site (mail, rédaction de blog, paiement...)</p>
+
+					<img src="../images/syntax_form.png" alt="Syntaxe Form">
+
+					<p>Action détermine où l'information est envoyée et method détermine le protocol HTTP pour l'envoyer. Il peut être POST ou GET (par convention ils sont écrits en majuscules)</p>
+
+					<p>On peut collecter les informations grâce à différents outils :</p>
+
+					<img src="../images/outils_forms.png" alt="Outils Form">
+					
+
+					<code>&lt;<span class="rose">a</span> <span class="vert">href</span>=<span class="jaune">'index.html#sommaire'</span><span class="vert">Sommaire du site</span>&gt;</code><code>&lt;<span class="rose">a</span>/&gt;</code> : Pour aller au sommaire du site sur la page Index
+					</p><br><br>
+				</div>	
+			</section>
+
+<!-- Syntaxe des Forms 1-->
+			<section class="page couleur">
+				<div class="page-center placement-vertical">
+					<header>
+					<h2 id="syntaxe-forms-1">Syntaxe des Forms 1/4</h2>
+					</header>
+					
+					<img src="../images/label_input.png" alt="lien entre label et input par l'id">
+
+					<h3>Type text</h3>
+					<p><code>&lt;<span class="rose">div</span> <span class="vert">class</span>=<span class="jaune">'form-row'</span>&gt;</code> <br> 
+					&emsp;<code>&lt;<span class="rose">label</span> <span class="vert">for</span>=<span class="jaune">'full-name'</span>&gt;</code>Name<code>&lt;/<span class="rose">label</span>&gt;</code> → relier le label en utilisant <span class="vert">for</span>=<span class="jaune">id</span> de l'input <br>
+					&emsp;<code>&lt;<span class="rose">input</span> <span class="vert">id</span>=<span class="jaune">'full-name'</span> <span class="vert">name</span>=<span class="jaune">'full-name'</span> <span class="vert">type</span>=<span class="jaune">'text'</span>&gt;</code> → l'id est pour pouvoir le relier au label, "type" détermine le type d'input. Il est important de donner un nom car au final ça enverra <strong>name=valeur</strong> entrée par l'utilisateur. Il est possible d'attribuer une valeur par défaut à value (la case texte est ainsi préremplie)</p> <br>
+
+					<h3>Type email</h3>
+					<p><code>&lt;<span class="rose">label</span> <span class="vert">for</span>=<span class="jaune">'email'</span>&gt;</code>Email<code>&lt;/<span class="rose">label</span>&gt;</code><br>
+					<code>&lt;<span class="rose">input</span> <span class="vert">id</span>=<span class="jaune">'email'</span><br>
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="vert">name</span>=<span class="jaune">'email'</span><br>
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="vert">type</span>=<span class="jaune">'email'</span> → n'accepte que les emails
+					<br>
+					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="vert">placeholder</span>=<span class="jaune">'joe@example.com'</span>/&gt;</code> → exemple qui apparaît en grisé dans le champ créé</p> <br>
+
+					<h3>Type password</h3>
+					<p><code>&lt;<span class="rose">label</span> <span class="vert">for</span>=<span class="jaune">'user-password'</span>&gt;</code>Password :<code>&lt;/<span class="rose">label</span>&gt;</code><br>
+					<code>&lt;<span class="rose">input</span> <span class="vert">id</span>=<span class="jaune">'user-password'</span> <span class="vert">name</span>=<span class="jaune">'user-password'</span> <span class="vert">type</span>=<span class="jaune">'password'</span>/&gt;</code> → case texte qui cache ce qu'écrit l'utilisateur avec des *
+					</p> <br><br>
+				</div>	
+			</section>
+
+<!-- Syntaxe des Forms 1-->
+			<section class="page couleur">
+				<div class="page-center placement-vertical">
+					<header>
+					<h2 id="syntaxe-forms-2">Syntaxe des Forms 2/4</h2>
+					</header>
+
+					<h3>Type date</h3>
+					<p><code>&lt;<span class="rose">label</span> <span class="vert">for</span>=<span class="jaune">'naissance'</span>&gt;</code>Votre date de naissance :<code>&lt;/<span class="rose">label</span>&gt;</code><br>
+					<code>&lt;<span class="rose">input</span> <span class="vert">id</span>=<span class="jaune">'naissance'</span> <span class="vert">name</span>=<span class="jaune">'naissance'</span> <span class="vert">type</span>=<span class="jaune">'date'</span>/&gt;</code>
+					</p>
+
+					<h3>Type URL</h3>
+					<p><code>&lt;<span class="rose">label</span> <span class="vert">for</span>=<span class="jaune">'site'</span>&gt;</code>Entrez votre site :<code>&lt;/<span class="rose">label</span>&gt;</code><br>
+					<code>&lt;<span class="rose">input</span> <span class="vert">id</span>=<span class="jaune">'site'</span> <span class="vert">name</span>=<span class="jaune">'site'</span> <span class="vert">type</span>=<span class="jaune">'url'</span>/&gt;</code>
+					</p>
+
+					<h3>Type numbers</h3>
+					<p><code>&lt;<span class="rose">label</span> <span class="vert">for</span>=<span class="jaune">'years'</span>&gt;</code>Years of experience :<code>&lt;/<span class="rose">label</span>&gt;</code><br>
+					<code>&lt;<span class="rose">input</span> <span class="vert">id</span>=<span class="jaune">'years'</span> <span class="vert">name</span>=<span class="jaune">'years'</span> <span class="vert">type</span>=<span class="jaune">'numbers'</span> <span class="vert">step</span>=<span class="jaune">'1'</span>/&gt;</code> → créé un menu déroulant de chiffres</p>
+
+					<h3>Type range</h3>
+					<p><code>&lt;<span class="rose">label</span> <span class="vert">for</span>=<span class="jaune">'volume'</span>&gt;</code>Volume Control :<code>&lt;/<span class="rose">label</span>&gt;</code><br>
+					<code>&lt;<span class="rose">input</span> <span class="vert">id</span>=<span class="jaune">'volume'</span> <span class="vert">name</span>=<span class="jaune">'volume'</span> <span class="vert">type</span>=<span class="jaune">'range'</span> <span class="vert">min</span>=<span class="jaune">'0'</span><span class="vert">max</span>=<span class="jaune">'100'</span><span class="vert">step</span>=<span class="jaune">'1'</span>/&gt;</code> → permet de borner le choix de l'utilisateur
+					</p>
+
+					<h3>Type TextArea</h3>
+					<p><code>&lt;<span class="rose">label</span> <span class="vert">for</span>=<span class="jaune">'abstract'</span>&gt;</code>Abstract<code>&lt;/<span class="rose">label</span>&gt;</code><br>
+					<code>&lt;<span class="rose">textarea</span> <span class="vert">id</span>=<span class="jaune">'abstract'</span> <span class="vert">name</span>=<span class="jaune">'abstract'</span> <span class="vert">rows</span>=<span class="jaune">'5'</span> <span class="vert">cols</span>=<span class="jaune">'30'</span>/&gt;</code><code>&lt;<span class="rose">textarea</span>/&gt;</code> → Pour un text area. On peut déterminer le nombre de colonnes et de lignes
+					</p><br><br>
+				</div>	
+			</section>
+
+<!-- Syntaxe des Forms 3-->
+			<section class="page couleur">
+				<div class="page-center placement-vertical">
+					<header>
+					<h2 id="syntaxe-forms-3">Syntaxe des Forms 3/4</h2>
+					</header>
+
+					<h3>Type Radio</h3>
+					<p><code>&lt;<span class="rose">fieldset</span> <span class="vert">class</span>=<span class="jaune">'form-row'</span>&gt;</code> → encapsuler les boutons radio dans un <code>&lt;<span class="rose">fieldset</span>&gt;</code> <br>
+					&emsp;<code>&lt;<span class="rose">legend</span>&gt;</code>Type of talk<code>&lt;/<span class="rose">legend</span>&gt;</code> → équivalent du label pour les radio. En effet il n'y a qu'un seul titre pour tous les boutons qui sont liés (on ne peut choisir qu'un seul bouton!). Or ils ont des id différents puisque les id sont uniques.<br>
+					&emsp;<code>&lt;<span class="rose">input</span> <span class="vert">id</span>=<span class="jaune">'talk-type-1'</span> <span class="vert">talk-type</span>=<span class="jaune">'site'</span> <span class="vert">type</span>=<span class="jaune">'radio'</span> <span class="vert">value</span>=<span class="jaune">'main-stage'</span>/&gt;</code> → value est la valeur qui sera renvoyée si l'utilisateur sélectionne ce bouton <br>
+					&emsp;<code>&lt;<span class="rose">label</span> <span class="vert">for</span>=<span class="jaune">'talk-type-1'</span>&gt;</code>Main Stage<code>&lt;/<span class="rose">label</span>&gt;</code> → c'est ce qui est affiché à côté du bouton<br>
+					&emsp;<code>&lt;<span class="rose">input</span> <span class="vert">id</span>=<span class="jaune">'talk-type-2'</span> <span class="vert">talk-type</span>=<span class="jaune">'site'</span> <span class="vert">type</span>=<span class="jaune">'radio'</span> <span class="vert">value</span>=<span class="jaune">'workshop'</span> <span class="vert">checked</span>/&gt;</code> → Bouton selectionné par défaut <br>
+					&emsp;<code>&lt;<span class="rose">label</span> <span class="vert">for</span>=<span class="jaune">'talk-type-2'</span>&gt;</code>Workshop<code>&lt;/<span class="rose">label</span>&gt;</code><br>
+					<code>&lt;/<span class="rose">fieldset</span>&gt;</code>
+					</p>
+
+					<img src="../images/radio_label_fieldset.png" alt="Bouton Radio"><br><br>
+				</div>	
+			</section>
+
+<!-- Syntaxe des Forms 4-->
+			<section class="page couleur">
+				<div class="page-center placement-vertical">
+					<header>
+					<h2 id="syntaxe-forms-4">Syntaxe des Forms 4/4</h2>
+					</header>
+
+					<h3>Type dropdown menu</h3>
+					<p><code>&lt;<span class="rose">label</span> <span class="vert">for</span>=<span class="jaune">'t-shirt'</span>&gt;</code>T-Shirt Size :<code>&lt;/<span class="rose">label</span>&gt;</code><br>
+					<code>&lt;<span class="rose">select</span> <span class="vert">id</span>=<span class="jaune">'t-shirt'</span> <span class="vert">name</span>=<span class="jaune">'t-shirt'</span>&gt;</code> → Pour un dropdown menu <code>&lt;<span class="rose">datalist</span>&gt;</code> marche aussi à la place de select. Avec select l'utilisateur n'a le choix qu'entre les options écrites dans le code. Avec datalist il peut en choisir une autre <br>
+					&emsp;<code>&lt;<span class="rose">option</span> <span class="vert">value</span>=<span class="jaune">'xs'</span>&gt;</code>Extra Small<code>&lt;/<span class="rose">option</span>&gt;</code><br>
+					&emsp;<code>&lt;<span class="rose">option</span> <span class="vert">value</span>=<span class="jaune">'s'</span>&gt;</code>Small<code>&lt;/<span class="rose">option</span>&gt;</code><br>
+					&emsp;<code>&lt;<span class="rose">option</span> <span class="vert">value</span>=<span class="jaune">'m'</span>&gt;</code>Medium<code>&lt;/<span class="rose">option</span>&gt;</code><br>
+					&emsp;<code>&lt;<span class="rose">option</span> <span class="vert">value</span>=<span class="jaune">'l'</span>&gt;</code>Large<code>&lt;/<span class="rose">option</span>&gt;</code><br>
+					<code>&lt;/<span class="rose">select</span>&gt;</code>
+					</p>
+
+					<h3>Type checkbox</h3>
+					<p><code>&lt;<span class="rose">label</span> <span class="vert">for</span>=<span class="jaune">'scales'</span>&gt;</code>Scales<code>&lt;/<span class="rose">label</span>&gt;</code><br>
+					<code>&lt;<span class="rose">input</span> <span class="vert">id</span>=<span class="jaune">'scales'</span> <span class="vert">name</span>=<span class="jaune">'scales'</span> <span class="vert">type</span>=<span class="jaune">'checkbox'</span> <span class="vert">checked</span>/&gt;</code><br>
+					<code>&lt;<span class="rose">label</span> <span class="vert">for</span>=<span class="jaune">'horns'</span>&gt;</code>Horns<code>&lt;/<span class="rose">label</span>&gt;</code><br>
+					<code>&lt;<span class="rose">input</span> <span class="vert">id</span>=<span class="jaune">'horns'</span> <span class="vert">name</span>=<span class="jaune">'horns'</span> <span class="vert">type</span>=<span class="jaune">'checkbox'</span>&gt;</code>
+					</p>
+
+					<h3>Type Bouton</h3>
+					<p><code>&lt;<span class="rose">div</span> <span class="vert">class</span>=<span class="jaune">'form-row'</span>&gt;</code><br>
+					&emsp;<code>&lt;<span class="rose">button</span>&gt;</code>Submit<code>&lt;/<span class="rose">button</span>&gt;</code><br>
+					<code>&lt;/<span class="rose">div</span>&gt;</code> → Pour soumettre le form
+				</div>	
+			</section>
+
+<!-- Validation à priori des forms-->
+			<section class="page couleur">
+				<div class="page-center placement-vertical">
+					<header>
+					<h2 id="validation-a-priori-forms">Validation d'un form à priori</h2>
+					</header>
+
+					<p>
+					Il existe des validations du côté du serveur (vérification d'adéquation login – mot de passe) mais aussi des validations côté client (vérification en direct que la saisie de l'utilisateur est adéquate avant de l'envoyer vers le serveur) <br><br>
+
+					Inputs obligatoires : <code>&lt;<span class="rose">input</span> <span class="vert">id</span>=<span class="jaune">'allergies'</span> <span class="vert">name</span>=<span class="jaune">'allergies'</span> <span class="vert">type</span>=<span class="jaune">'text'</span> <span class="vert"><strong>required</strong></span>&gt;</code><br><br>
+
+					Min et max pour nombres : <code>&lt;<span class="rose">input</span> <span class="vert">id</span>=<span class="jaune">'guests'</span> <span class="vert">name</span>=<span class="jaune">'guests'</span> <span class="vert">type</span>=<span class="jaune">'numbers'</span> <strong></span> <span class="vert">min</span>=<span class="jaune">'1'</span> </span> <span class="vert">max</span>=<span class="jaune">'4'</span></strong>&gt;</code> → fonctionne aussi avec range. Par contre n'empêche pas l'utilisateur d'écrire un nombre qui n'est pas dans le range <br><br>
+
+					Vérification de la longueur d'un texte :
+					<code>&lt;<span class="rose">input</span> <span class="vert">id</span>=<span class="jaune">'summary'</span> <span class="vert">name</span>=<span class="jaune">'summary'</span> <span class="vert">type</span>=<span class="jaune">'text'</span> <strong></span> <span class="vert">minlength</span>=<span class="jaune">'5'</span> </span> <span class="vert">maxlength</span>=<span class="jaune">'250'</span></strong>&gt;</code><br><br>
+					 
+
+					Vérification que la saisie correspond bien à ce qui est attendu grace à pattern : <br> Par exemple pour un numéro de carte de crédit il faut que ce soit 14 à 16 chiffres [0-9]{14,16} <br>
+					<code>&lt;<span class="rose">input</span> <span class="vert">id</span>=<span class="jaune">'payment'</span> <span class="vert">name</span>=<span class="jaune">'payment'</span> <span class="vert">type</span>=<span class="jaune">'text'</span> <strong></span> <span class="vert">pattern</span>=<span class="jaune">'[0-9]{14,16}'</span></strong>&gt;</code><br>
+					[a-zA-Z0-9]+ : toutes les lettres minuscules et majuscules et tous les chiffres rien de plus. Le + sert à dire que chaque caractère peut être utilisé plusieurs fois.
+					</p>
+				</div>
+			</section>
+
+<!-- Autres attributs utiles & organisation des forms-->
+			<section class="page couleur">
+				<div class="page-center placement-vertical">
+					<header>
+					<h2 id="autres-attributs&orga-forms">Autres attributs utiles & organisation des forms</h2>
+					</header>
+
+					<p>Attributs: <br><br>
+					autocomplete='on' remplis un champ automatiquement s'il a déjà été remplis ailleurs
+					autofocus='autofocus' attribue le focus dans ce champ dès le chargement de la page
+					placeholder='ex : Nico' donne en grisé une valeur dans une zone de texte
+					checked='checked' case précochées
+					selected='selected' pour sélectionner une option à l'affichage</p><br>
+
+					<p>Organiser ses formulaires avec fieldset : <br><br>
+
+					Permet de regrouper des éléments entre eux comme par exemple les données perso puis les loisirs : <br>
+
+					<code>&lt;<span class="rose">fieldset</span>&gt;</code><code>&lt;<span class="rose">legend</span>&gt;</code>données perso :<code>&lt;/<span class="rose">legend</span>&gt;</code> les options ou inputs pour les données perso <code>&lt;/<span class="rose">fieldset</span>&gt;</code><br>
+					puis <code>&lt;<span class="rose">fieldset</span>&gt;</code><code>&lt;<span class="rose">legend</span>&gt;</code>loisirs :<code>&lt;/<span class="rose">legend</span>&gt;</code> les options ou inputs pour les loisirs <code>&lt;/<span class="rose">fieldset</span>&gt;</code><br>
+					</p>
+				</div>
+			</section>
+
+<!-- Les tableaux-->
+			<section class="page couleur">
+				<div class="page-center placement-vertical">
+					<header>
+					<h2 id="tableaux">Les tableaux</h2>
+					</header>
+					
+					<p>
+					<code>&lt;<span class="rose">table</span> <span class="vert">border</span>=<span class="jaune">'1'</span>&gt;</code> → tag pour créer un tableau. L’attribut broder détermine l'épaisseur du quadrillage mais il vaut mieux le régler dans CSS ! <br>
+					&emsp;<code>&lt;<span class="rose">thead</span>&gt;</code> → A utiliser pour les grands tableaux. Ne contient que les titres (th) <br>
+					&emsp;&emsp;<code>&lt;<span class="rose">tr</span>&gt;</code> → tag pour créer une ligne dans le tableau (1ère ligne) <br>
+					&emsp;&emsp;&emsp;<code>&lt;<span class="rose">th</span>&gt;</code><code>&lt;/<span class="rose">th</span>&gt;</code> → tag "table heading" pour les titres. Celui ci est vide car c'est la case en haut à gauche du tableau <br>
+					&emsp;&emsp;&emsp;<code>&lt;<span class="rose">th</span> <span class="vert">scope</span>=<span class="jaune">'col'</span>&gt;</code>Saturday<code>&lt;/<span class="rose">th</span>&gt;</code> → titre de la première colonne. L'attribut scope précise qu'il s'agit d'un titre de colonne. <br>
+					&emsp;&emsp;&emsp;<code>&lt;<span class="rose">th</span> <span class="vert">scope</span>=<span class="jaune">'col'</span>&gt;</code>Sunday<code>&lt;/<span class="rose">th</span>&gt;</code> <br>
+					&emsp;&emsp;<code>&lt;/<span class="rose">tr</span>&gt;</code> <br>
+					&emsp;<code>&lt;/<span class="rose">thead</span>&gt;</code> <br>
+					&emsp;<code>&lt;<span class="rose">tbody</span>&gt;</code> → A utiliser pour les grands tableaux. Ne contient que le corps du tableau sans les titres (th) <br>
+					&emsp;&emsp;<code>&lt;<span class="rose">tr</span>&gt;</code> <br>
+					&emsp;&emsp;&emsp;<code>&lt;<span class="rose">th</span> <span class="vert">scope</span>=<span class="jaune">'row'</span>&gt;</code>Temperature<code>&lt;/<span class="rose">th</span>&gt;</code> → titre de la première ligne. L’attribut scope précise qu'il s'agit d'un titre de ligne. <br>
+					&emsp;&emsp;&emsp;<code>&lt;<span class="rose">td</span>&gt;</code>73<code>&lt;/<span class="rose">td</span>&gt;</code> → tag « table data » pour les données <br>
+					&emsp;&emsp;&emsp;<code>&lt;<span class="rose">td</span> <span class="vert">rowspan</span>=<span class="jaune">"2"</span>&gt;</code>81<code>&lt;/<span class="rose">td</span>&gt;</code> → l’attribut rowspan sert à faire déborder la data dans 2 cases contigues en ligne. Colspan existe aussi. <br>
+					&emsp;&emsp;<code>&lt;/<span class="rose">tr</span>&gt;</code> <br>
+					&emsp;<code>&lt;/<span class="rose">tbody</span>&gt;</code> <br>
+					&emsp;<code>&lt;<span class="rose">tfoot</span>&gt;</code> <br> → A utiliser pour les grands tableaux pour la dernière ligne (total par exemple) <br>
+					&emsp;&emsp;<code>&lt;<span class="rose">tr</span>&gt;</code> <br>
+					&emsp;&emsp;&emsp;<code>&lt;<span class="rose">th</span>&gt;</code>Total<code>&lt;/<span class="rose">th</span>&gt;</code> <br>
+					&emsp;&emsp;&emsp;<code>&lt;<span class="rose">td</span>&gt;</code>$22M<code>&lt;/<span class="rose">td</span>&gt;</code> <br>
+					&emsp;&emsp;&emsp;<code>&lt;<span class="rose">td</span>&gt;</code>$12.5M<code>&lt;/<span class="rose">td</span>&gt;</code> <br>
+					&emsp;&emsp;<code>&lt;/<span class="rose">tr</span>&gt;</code> <br>
+					&emsp;<code>&lt;/<span class="rose">tfoot</span>&gt;</code> <br>
+					<code>&lt;/<span class="rose">table</span>&gt;</code> <br><br>
+					Une bonne pratique semble être de mettre d'abord thead puis tfoot et enfin tbody. <br><br><br>
+					</p>
+				</div>
+			</section>
+		</article>
+	</main>
+
+	<footer>
+		
+	</footer>
+</body>
+</html>

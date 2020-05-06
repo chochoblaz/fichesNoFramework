@@ -1,0 +1,161 @@
+.test {
+	border: 3px solid black;
+}
+
+.test2 {
+	border: 3px solid red;
+}
+
+.test3 {
+	border: 3px solid blue;
+}
+
+nav > ul {
+	margin: 0;
+	padding: 0;
+}
+
+.banniere{
+	color: #F0F0F0;
+	background-color: rgba(255, 87, 34);
+	height: 7rem;
+	width: 100vw;
+	text-align: center;
+	position: fixed;
+	z-index: 100;
+}
+
+.banniere h1 {
+	padding-top: 1.5rem;
+}
+
+.banniere p {
+	font-weight: lighter;
+	opacity: 0.6;
+	padding: 0.5rem;
+}
+
+.banniere nav {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: left;
+}
+
+.banniere nav ul {
+	list-style: none;
+	padding: 0;
+}
+
+.sous-menu {
+	display: none;
+	position: absolute;
+	top: 1.4rem;
+	background-color: rgba(255, 87, 34);
+	margin-left: 7px; 
+}
+
+.sous-menu a {
+	text-decoration: none;
+	color: #F0F0F0;
+	padding: 0px 3px 3px 3px;
+}
+
+.sous-menu li:hover {
+	background-color: #FF8A65;
+}
+
+nav input[type=checkbox] {
+	display: none;
+}
+
+.menu-deroulant {
+	padding-left: 10px;
+}
+
+#menu-deroulant:checked + .sous-menu{
+	display: block;	
+}
+
+
+/*.dropdown-menu {
+
+	position: absolute;
+	top: 1.4rem;
+	margin-left: 5px;
+	background-color: rgba(255, 87, 34);
+	margin: 0;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+}
+
+.dropdown-toggle::after{
+	display: none;
+}
+
+#dropdownMenuLink:hover{
+	color: white;
+	text-decoration: none;
+}
+
+.dropdown-item {
+	padding: 0.5rem 0 0 1rem;
+	color: #F0F0F0;
+}
+
+.dropdown-item:hover {
+	background-color: #FF8A65;
+}*/
+
+
+@media only screen and (min-width: 600px) {
+	
+
+
+	.cache {
+		display: none;
+	}
+	
+	.banniere nav {
+	text-align: center;
+	}
+
+	.banniere > nav > ul > li {
+	padding: 0rem 0.2rem;
+	margin-right: -5px;
+	}
+
+	.sous-menu {
+		display: block;
+		position: relative;
+		margin: 0;
+		background-color: rgba(255, 87, 34);
+		padding: 0.2rem;
+		z-index: 1000;
+		top: 0;
+		margin-left: 0;
+	}
+
+	.sous-menu li {
+		display: inline-block;
+		padding: 5px 3px 0px 3px;
+		margin: 0px;
+		border-left: 1px solid #F0F0F0;
+	}
+
+	.sous-menu li:first-of-type {
+		border-left: none;
+	}
+
+	.sous-menu li a {
+		list-style: none;
+		text-decoration: none;
+		color: #F0F0F0;
+		padding: 3px 3px 0px 3px;
+		padding: 5px 5px 0px 5px;
+	}
+
+	.sous-menu li:hover {
+		background-color: #FF8A65;
+	}
